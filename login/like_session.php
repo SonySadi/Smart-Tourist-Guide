@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('connection.php');
+include('./../connection.php');
 
 $id = $_SESSION['id'];
 $type = $_GET['type'];
@@ -32,4 +32,3 @@ else{
 	else
 	header('location: show_details.php?date1='.$date1.'&stime='.$stime.'&etime='.$etime.'&dayNo='.$dayNo);
 }
-?>

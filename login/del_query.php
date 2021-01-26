@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('connection.php');
+include('./../connection.php');
 
 $id = $_SESSION['id'];
 $date1 = $_GET['date1'];

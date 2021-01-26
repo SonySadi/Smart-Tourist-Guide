@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('connection.php');
+include('./../connection.php');
 
 $id = $_SESSION['id'];
 $date1 = $_GET['date1'];
@@ -38,4 +38,3 @@ if($result1->num_rows > 0){
 		header('location: home.php?msg='.$msg);
 	}
 }
-?>
