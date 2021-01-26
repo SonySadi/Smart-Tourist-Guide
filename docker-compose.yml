@@ -1,0 +1,36 @@
+version: "3"
+services:
+    # web at localhost
+    web:
+        build: .
+        ports:
+            - "80:80"
+        volumes:
+            - .:/var/www/html/
+        links:
+            - mysql
+    mysql:
+        image: mysql:5.7.29
+        command: --default-authentication-plugin=mysql_native_password
+        environment:
+            MYSQL_ROOT_PASSWORD: Pass
+            MYSQL_DATABASE: sctdb
+        restart: always
+        volumes:
+            - ./../mysqlvol:/var/lib/mysql
+    # phpmyadmin at localhost:8080
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links:
+            - mysql
+        environment:
+            PMA_ARBITRARY: 1
+            PMA_HOST: mysql
+            PMA_PORT: 3306
+            PMA_USER: "root"
+            PMA_PASSWORD: "Pass"
+        restart: always
+        ports:
+            - "8080:80"
+#docker exec -i smart-tourist-guide_mysql_1 mysql -uroot -pPass sctdb < ./sctdb.sql
+# docker cp ./sctdb.sql smart-tourist-guide_mysql_1:./
