@@ -11,13 +11,3 @@ $query = $_GET['query'];
 $str = "";
 $like = $_SESSION['ulike'];
 $ulike = "";
-
-for($i = 0; $i < strlen($like); $i++){
-if()
-
-}
-
-
-
-
-?>
