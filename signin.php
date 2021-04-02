@@ -11,6 +11,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 	$row = $result->fetch_assoc();
 	$_SESSION['email'] = $email;
+	$_SESSION['name'] = $row['name'];
 	$_SESSION['id'] = $row['id'];
 	//header('location:login/home.php');
 } else {

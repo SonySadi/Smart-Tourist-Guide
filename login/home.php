@@ -53,7 +53,7 @@ $_SESSION['lng'] = array();
 		<a href="home.php" class="logo">Smart City Traveller</a>
 		<div class="header-right">
 			<a class="active" href="home.php">Home</a>
-			<a href="signout.php">signout<img src="images/icons/user_ironman.png" /></a>
+			<a href="/logout.php"><img src="images/icons/user_ironman.png" /> <b> <?php echo $_SESSION['name']; ?></b> signout</a>
 			<a href="../aboutus/aboutus.html">About us</a>
 		</div>
 	</div>
@@ -111,6 +111,7 @@ $_SESSION['lng'] = array();
 				}
 				?>
 				<br />
+
 				<form class="contact3-form validate-form" name="myForm" onsubmit="return validateForm()" class="login100-form validate-form" method="POST" action="schedule.html">
 					<center><button class="btn btn-danger" type="submit" name="signin">
 							Create New Schedule
