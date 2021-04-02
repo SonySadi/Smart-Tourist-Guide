@@ -9,7 +9,7 @@
         $phone = $_POST['phone'];
         $dob = $_POST['dob'];
         $pass = $_POST['pass'];                             
-        $sql = "INSERT INTO registration(name,dob,gender,email,mob,pass) VALUES('$name','$dob','$gen','$email','$phone','$pass')";     
+        $sql = "INSERT INTO registration(name,dob,gender,email,mob,pass) VALUES('$name','$dob','$gen','$email',0,'$pass')";     
         
 		
         if(! $conn->query( $sql)) {
@@ -24,5 +24,3 @@
 			
         //header("location: welcome.php");
         $conn->close();
-    
-?>
