@@ -53,25 +53,25 @@ for ($i = 1; $i < $_SESSION['index']; $i++) {
 
 
 
-require 'PHPMailerAutoload.php';
-$mail = new PHPMailer;
-$mail->SMTPDebug = 0;
-$mail->IsSMTP();								//Sets Mailer to send message using SMTP
-$mail->Host = 'smtp.gmail.com';		//Sets the SMTP hosts of your Email hosting, this for Godaddy
-$mail->Port = '587';								//Sets the default SMTP server port
-$mail->SMTPAuth = true;							//Sets SMTP authentication. Utilizes the Username and Password variables
-$mail->Username = 'smartguide.mnnit@gmail.com';					//Sets SMTP username
-$mail->Password = '2018is10';					//Sets SMTP password
-$mail->SMTPSecure = 'tls';							//Sets connection prefix. Options are "", "ssl" or "tls"
-$mail->From = "smartguide.mnnit@gmail.com";					//Sets the From email address for the message
-$mail->FromName = 'smart city travelers';				//Sets the From name of the message
-$mail->AddAddress($_SESSION['email'], "Customer");		//Adds a "To" address
-//$mail->AddCC($email, $_POST["name"]);	//Adds a "Cc" address
-$mail->WordWrap = 50;							//Sets word wrapping on the body of the message to a given number of characters
-$mail->IsHTML(true);							//Sets message type to HTML				
-$mail->Subject = $subject;				//Sets the Subject of the message
-$mail->Body = $message;				//An HTML or plain text message body
-$mail->Send();					//Send an Email. Return true on success or false on error
+// require 'PHPMailerAutoload.php';
+// $mail = new PHPMailer;
+// $mail->SMTPDebug = 0;
+// $mail->IsSMTP();								//Sets Mailer to send message using SMTP
+// $mail->Host = 'smtp.gmail.com';		//Sets the SMTP hosts of your Email hosting, this for Godaddy
+// $mail->Port = '587';								//Sets the default SMTP server port
+// $mail->SMTPAuth = true;							//Sets SMTP authentication. Utilizes the Username and Password variables
+// $mail->Username = 'smartguide.mnnit@gmail.com';					//Sets SMTP username
+// $mail->Password = '2018is10';					//Sets SMTP password
+// $mail->SMTPSecure = 'tls';							//Sets connection prefix. Options are "", "ssl" or "tls"
+// $mail->From = "smartguide.mnnit@gmail.com";					//Sets the From email address for the message
+// $mail->FromName = 'smart city travelers';				//Sets the From name of the message
+// $mail->AddAddress($_SESSION['email'], "Customer");		//Adds a "To" address
+// //$mail->AddCC($email, $_POST["name"]);	//Adds a "Cc" address
+// $mail->WordWrap = 50;							//Sets word wrapping on the body of the message to a given number of characters
+// $mail->IsHTML(true);							//Sets message type to HTML				
+// $mail->Subject = $subject;				//Sets the Subject of the message
+// $mail->Body = $message;				//An HTML or plain text message body
+// $mail->Send();					//Send an Email. Return true on success or false on error
 
 
 
@@ -340,7 +340,7 @@ $mail->Send();					//Send an Email. Return true on success or false on error
 		}
 	</script>
 
- 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARsQvuyAvwTGLsbP87gkCYvCa4dAXkVMY&callback=initMap&v=3&sensor=false&libraries=geometry"  type="text/javascript"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARsQvuyAvwTGLsbP87gkCYvCa4dAXkVMY&callback=initMap&v=3&sensor=false&libraries=geometry" type="text/javascript"></script>
 
 
 </body>

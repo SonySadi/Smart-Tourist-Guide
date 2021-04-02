@@ -66,8 +66,8 @@ $etime = $_GET['etime'];
 						var outp1;
 						var date1 = "<?php echo $date1; ?>"
 						var city = "<?php echo $city; ?>";
-						var CLIENT_ID = "Q4NKLGQUILM3Z10LF5MDVPYP3YA02VIF4YUW1APUI3LKXN0Z";
-						var CLIENT_SECRET = "YNOXSSQKQ3FW4SRYQSFA404KLLVNXKCYZOUMHH0ERXMRXZWY";
+						var CLIENT_ID = "H0PBVTV2TAFOMPHN1FHHB1WPMXCREZZ3TLUHSGKVXXXF5IJU";
+						var CLIENT_SECRET = "VF5BBF4YKMF1TBGY2ZP5QJZGTHZW0H103CF22QA4FXIUO4NI";
 						var QUERY = "<?php echo $query1; ?>";
 						var dayNo = <?php echo $dayNo; ?>;
 						var stime = "<?php echo $stime; ?>";
@@ -79,7 +79,7 @@ $etime = $_GET['etime'];
 
 						function get_response(callback) {
 							const Http = new XMLHttpRequest();
-							const url = "https://api.foursquare.com/v2/venues/search?near=" + city + "&query=" + QUERY + "&client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&v=" + YYYYMMDD;
+							const url = "https://api.foursquare.com/v2/venues/search?ll=40.74224,-73.99386&near=" + city + "&query=" + QUERY + "&client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&v=" + YYYYMMDD;
 
 							Http.open("GET", url);
 							Http.send();
@@ -182,18 +182,7 @@ $etime = $_GET['etime'];
 	<!--===============================================================================================-->
 	<script src="/js/main.js"></script>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
 
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-23581568-13');
-	</script>
 
 </body>
 
