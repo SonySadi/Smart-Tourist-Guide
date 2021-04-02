@@ -40,11 +40,11 @@ $_SESSION['ival'] = 1;
 
 $subject = 'smart city suggestions';
 $message = '';
-$gmap = "https://www.google.com/maps/search/?api=1&query=";
+$gmap = "https://www.google.com/maps/search/?api=AIzaSyARsQvuyAvwTGLsbP87gkCYvCa4dAXkVMY&query=";
 $rest = explode(',', $venues);
 for ($i = 1; $i < $_SESSION['index']; $i++) {
 
-	$gmap = "<tabel border=\"1\"><tr><th>" . $rest[$i] . "</th><th></th></tr><tr><td></td></tr><tr><td>" . "https://www.google.com/maps/search/?api=1&query=" . $_SESSION['lat'][$_SESSION['ival']] . ',' . $_SESSION['lng'][$_SESSION['ival']] . PHP_EOL . '</tabel>';
+	$gmap = "<tabel border=\"1\"><tr><th>" . $rest[$i] . "</th><th></th></tr><tr><td></td></tr><tr><td>" . "https://www.google.com/maps/search/?api=AIzaSyARsQvuyAvwTGLsbP87gkCYvCa4dAXkVMY&query=" . $_SESSION['lat'][$_SESSION['ival']] . ',' . $_SESSION['lng'][$_SESSION['ival']] . PHP_EOL . '</tabel>';
 	//$gmap="hello";
 	$message .= $gmap . ' ';
 	$_SESSION['ival'] = $_SESSION['ival'] + 1;
@@ -102,20 +102,20 @@ $mail->Send();					//Send an Email. Return true on success or false on error
 		}
 	</style>
 	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+	<link rel="icon" type="image/png" href="/images/icons/favicon.ico" />
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<!--===============================================================================================-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -175,7 +175,7 @@ $mail->Send();					//Send an Email. Return true on success or false on error
 			}
 
 			function calcDistance(p1, p2) {
-				return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);
+				return (new google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);
 			}
 
 
@@ -339,9 +339,8 @@ $mail->Send();					//Send an Email. Return true on success or false on error
 			})
 		}
 	</script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIZsk8SNPVQMm8Tu4TXieZT0xIqkMSECo&callback=initMap&libraries=geometry">
-	</script>
 
+ 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARsQvuyAvwTGLsbP87gkCYvCa4dAXkVMY&callback=initMap&v=3&sensor=false&libraries=geometry"  type="text/javascript"></script>
 
 
 </body>
