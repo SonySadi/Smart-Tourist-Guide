@@ -3,9 +3,9 @@
 @author Aman Srivastava
 @date 27-03-2019
 */
-$dbhost = 'localhost';
+$dbhost = 'mysql';
 $dbuser = 'root';
-$dbpass = '';
+$dbpass = 'Pass';
 $dbname = "sctdb";
 $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 if ($conn->connect_error)
