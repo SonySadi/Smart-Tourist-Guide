@@ -13,8 +13,6 @@ $_SESSION['likes'] = array();
 $_SESSION['lat'] = array();
 $_SESSION['lng'] = array();
 
-echo $_SESSION['mylng'];
-
 ?>
 <html>
 <meta charset="UTF-8">

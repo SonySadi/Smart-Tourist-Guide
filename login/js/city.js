@@ -1,4 +1,5 @@
 const cities = [
+    {},
     { city: "Badarganj", lat: 25.654, long: 89.0705 },
     { city: "Bajitpur", lat: 24.2126, long: 90.9509 },
     { city: "Bandarban", lat: 21.8311, long: 92.3686 },
@@ -10,7 +11,7 @@ const cities = [
     { city: "Bhatpara Abhaynagar", lat: 23.0211, long: 89.4435 },
     { city: "Bheramara", lat: 24.021, long: 88.9922 },
     { city: "Bhola", lat: 22.1785, long: 90.7101 },
-    { city: "Bogura", lat: 24.8481, long: 89.373 },
+    { city: "Bogra", lat: 24.8481, long: 89.373 },
     { city: "Burhanuddin", lat: 22.4976, long: 90.7165 },
     { city: "Char Bhadrasan", lat: 23.5671, long: 89.9952 },
     { city: "Chhagalnaiya", lat: 23.0386, long: 91.5184 },

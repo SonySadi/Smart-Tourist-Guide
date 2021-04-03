@@ -3,7 +3,7 @@
 session_start();
 include('./../connection.php');
 
-if ($_POST['date'] && !empty($_POST['date'])) {
+if (isset($_POST['date']) && $_POST['date'] && !empty($_POST['date'])) {
     $id = $_SESSION['id'];
     $date = $_POST['date'];
     $city = $_POST['city'];
@@ -78,7 +78,8 @@ if ($_POST['date'] && !empty($_POST['date'])) {
     <div class="bg-contact3" style="background-image: url('images/home_slider.jpg')">
         <div class="container-contact3">
             <div class="wrap-contact3">
-                <form class="contact3-form validate-form" name="myForm" onsubmit="return validateForm()" class="login100-form validate-form" method="POST" action="schedule.php">
+                <form class="contact3-form validate-form" name="myForm" 
+                onsubmit="return validateForm()" class="login100-form validate-form" method="POST" action="schedule.php">
                     <div class="wrap-input3 validate-input" data-validate="Enter your DOB">
                         <label class="input3" name="likes">
                             <b> Enter Date</b>
@@ -182,7 +183,9 @@ if ($_POST['date'] && !empty($_POST['date'])) {
         for (let i = 0; i < cities.length; i++) {
             const city = cities[i];
             var option = document.createElement("option");
-            option.text = city.city;
+            if (i != 0) {
+                option.text = city.city;
+            }
             x.add(option);
         }
     </script>
