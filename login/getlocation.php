@@ -9,6 +9,9 @@ $query1 = $_GET['query1'];
 $dayNo = $_GET['dayNo'];
 $stime = $_GET['stime'];
 $etime = $_GET['etime'];
+
+
+echo $_SESSION['mylng'];
 ?>
 
 <!DOCTYPE html>
