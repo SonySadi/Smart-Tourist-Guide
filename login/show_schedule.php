@@ -120,7 +120,7 @@ for ($i = 1; $i < $_SESSION['index']; $i++) {
 			</div>
 		</div>
 	</div>
-	<script src="./show_schedule_js.php"></script>
+	<!-- <script src="./show_schedule_session.php"></script> -->
 	<script src="./show_schedule_map_js.php"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3F9Gv0o4wXfBRY1WnX48Hr7eBjhYoN8E&callback=initMap&libraries=geometry&v=weekly" async></script>
 
