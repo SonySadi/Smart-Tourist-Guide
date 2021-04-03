@@ -48,7 +48,7 @@ $etime = $_GET['etime'];
 		<a href="home.php" class="logo">Smart City Traveller</a>
 		<div class="header-right">
 			<a class="active" href="home.php">Home</a>
-			<a href="signout.php">signout<img src="images/icons/user_ironman.png" /></a>
+			<a href="/logout.php"><img src="images/icons/user_ironman.png" /> <b> <?php echo $_SESSION['name']; ?></b> signout</a>
 			<a href="../aboutus/aboutus.html">About us</a>
 		</div>
 	</div>
@@ -79,7 +79,7 @@ $etime = $_GET['etime'];
 
 						function get_response(callback) {
 							const Http = new XMLHttpRequest();
-							const url = "https://api.foursquare.com/v2/venues/search?ll=40.74224,-73.99386&near=" + city + "&query=" + QUERY + "&client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&v=" + YYYYMMDD;
+							const url = "https://api.foursquare.com/v2/venues/search?ll=23.8103,90.4125&near=" + city + "&query=" + QUERY + "&client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&v=" + YYYYMMDD;
 
 							Http.open("GET", url);
 							Http.send();

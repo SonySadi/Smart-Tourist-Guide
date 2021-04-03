@@ -130,7 +130,7 @@ for ($i = 1; $i < $_SESSION['index']; $i++) {
 		<a href="home.php" class="logo">Smart City Traveller</a>
 		<div class="header-right">
 			<a class="active" href="home.php">Home</a>
-			<a href="signout.php">signout<img src="images/icons/user_ironman.png" /></a>
+			<a href="/logout.php"><img src="images/icons/user_ironman.png" /> <b> <?php echo $_SESSION['name']; ?></b> signout</a>
 			<a href="../aboutus/aboutus.html">About us</a>
 		</div>
 	</div>

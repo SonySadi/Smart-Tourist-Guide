@@ -112,7 +112,7 @@ $_SESSION['lng'] = array();
 				?>
 				<br />
 
-				<form class="contact3-form validate-form" name="myForm" onsubmit="return validateForm()" class="login100-form validate-form" method="POST" action="schedule.html">
+				<form class="contact3-form validate-form" name="myForm" class="login100-form validate-form" method="POST" action="schedule.php">
 					<center><button class="btn btn-danger" type="submit" name="signin">
 							Create New Schedule
 						</button></center>
